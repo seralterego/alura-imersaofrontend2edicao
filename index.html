@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Imersão Alura - Clone Spotify</title>
   <!-- CSS links -->
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./src/styles/reset.css">
+  <link rel="stylesheet" href="./src/styles/vars.css">
+  <link rel="stylesheet" href="./src/styles/sidebar-footer.css">
+  <link rel="stylesheet" href="./src/styles/main-content.css">
   <!-- Font Awesome links -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css"/>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css"/>
@@ -16,7 +18,7 @@
     <nav class="sidebar__navigation">
       <div class="logo">
         <a href="">
-          <img src="./assets/icons/logo-spotify.png" alt="Logo Spotify">
+          <img src="./src/assets/icons/logo-spotify.png" alt="Logo Spotify">
         </a>
       </div>
       <ul>
@@ -66,24 +68,170 @@
       </div>
 
     </div>
+    <!-- DESAFIO DA Luri (prompt sumiu kkk) 👇🏽
+      Exercício: Criação de um Menu de Gêneros Musicais
+
+      HTML: Adicione uma nova seção abaixo do menu lateral que você já criou. Esta seção deve conter uma lista de gêneros musicais, como "Pop", "Rock", "Jazz", "Hip-Hop", etc. Utilize uma <ul> para a lista e cada gênero deve ser um <li>.
+
+      CSS:
+      Utilize o Flexbox para organizar os itens da lista horizontalmente.
+      Aplique um fundo diferente para essa nova seção, como um tom mais claro que o menu lateral.
+      Adicione um efeito de hover nos itens da lista para que eles mudem de cor quando o mouse passar sobre eles.
+      Interatividade: Se você se sentir à vontade, adicione um botão "Ver mais" abaixo da lista de gêneros que, ao ser clicado, exiba um alerta com uma mensagem como "Carregando mais gêneros...".
+
+      Esse exercício vai te ajudar a praticar o que você aprendeu sobre HTML e CSS, além de te dar mais experiência com o Flexbox! Boa sorte! 😊
+      -->
+    <div class="genres">
+      <ul>
+        <li>
+          <a href="#">
+            <span class="fa fa-music"></span>
+            <span>Pop</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="fa fa-music"></span>
+            <span>Rock</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="fa fa-music"></span>
+            <span>Jazz</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="fa fa-music"></span>
+            <span>Hip-Hop</span>
+          </a>
+        </li>
+        <div class="genres__btn-container">
+          <label for="checkGenres" class="genres__btn">Ver mais</label>
+          <input type="checkbox" id="checkGenres">
+          <p id="checkGenresLoading">Carregando mais gêneros...</p>
+        </div>
+      </ul>
+    </div>
   </div>
 
-  <!-- DESAFIO, fazer o footer para AULA 02 (49:27 no vídeo) -->
-  <!-- DESAFIO DA Luri (prompt no link da aula 02 somente)
-   Exercício: Criação de um Menu de Gêneros Musicais
+  <main>
+    <div class="main-container">
+      <nav class="header__navigation">
+        <div class="navigation">
+          <button class="arrow-left">
+            <img src="./src/assets/icons/small-left.png" alt="Seta esquerda">
+          </button>
+          <button class="arrow-right">
+            <img src="./src/assets/icons/small-right.png" alt="Seta direita">
+          </button>
+        </div>
+        <div class="header__search">
+          <img src="./src/assets/icons/search.png" alt="">
+          <input id="search-input" type="text" maxlength="800" placeholder="O que você quer ouvir?" />
+        </div>
+        <div class="header__login">
+          <button class="subscribe">Inscreva-se</button>
+          <button class="login">Entrar</button>
+        </div>
+      </nav>
 
-  HTML: Adicione uma nova seção abaixo do menu lateral que você já criou. Esta seção deve conter uma lista de gêneros musicais, como "Pop", "Rock", "Jazz", "Hip-Hop", etc. Utilize uma <ul> para a lista e cada gênero deve ser um <li>.
+      
+      <!-- DESAFIO AULA 03: Faça os cards de “Boa tarde” e “Navegar por todas as seções” -->
+      <div class="greetings">
+        <h1>Bom dia, boa tarde, boa noite!</h1>
+      </div>
 
-  CSS:
+      <!-- DESAFIO DA LURI (prompt abaixo) 
+      Claro! Que tal você criar um novo componente para a sua página inspirado no que aprendemos na aula?
 
-  Utilize o Flexbox para organizar os itens da lista horizontalmente.
-  Aplique um fundo diferente para essa nova seção, como um tom mais claro que o menu lateral.
-  Adicione um efeito de hover nos itens da lista para que eles mudem de cor quando o mouse passar sobre eles.
-  Interatividade: Se você se sentir à vontade, adicione um botão "Ver mais" abaixo da lista de gêneros que, ao ser clicado, exiba um alerta com uma mensagem como "Carregando mais gêneros...".
+      Desafio:
+      Crie uma seção de "Destaques" logo abaixo do cabeçalho (header) da sua página.
 
-  Esse exercício vai te ajudar a praticar o que você aprendeu sobre HTML e CSS, além de te dar mais experiência com o Flexbox! Boa sorte! 😊
+      Essa seção deve conter três cards que exibam informações sobre músicas populares. Cada card deve incluir:
+      - Uma imagem da capa do álbum (você pode usar imagens disponíveis na pasta de assets).
+        - O título da música.
+        - O nome do artista.
+        - Um botão que diga "Ouvir".
+
+        Utilize variáveis CSS para definir as cores de fundo e as fontes dos cards, assim como fizemos com o header.
+      
+      - Tente aplicar um layout responsivo, de forma que os cards se ajustem em diferentes tamanhos de tela.
+
+      - Depois de concluir, compartilhe sua criação no Discord da imersão para que possamos ver o que você fez! Boa sorte!
+      -->
+      <div class="highlights">
+        <h2>Confira os destaques do dia!</h2>
+        <div class="cards">
+          <div class="card-item">
+            <div class="card-item__artist">
+              <h3>"Leãozinho"</h3>
+              <span>por Caetano Veloso</span>
+            </div>
+            <img src="./src/assets/playlist/10.jpeg" alt="Capa playlist">
+            <button class="listen-now">Ouvir agora</button>
+          </div>
+          <div class="card-item">
+            <div class="card-item__artist">
+              <h3>"Cherry Bomb"</h3>
+              <span>por The Runaways</span>
+            </div>
+            <img src="./src/assets/playlist/11.jpeg" alt="Capa playlist">
+          </div>
+          <div class="card-item">
+            <div class="card-item__artist">
+              <h3>"Um Bom Lugar"</h3>
+              <span>por Sabotage</span>
+            </div>
+            <img src="./src/assets/playlist/12.jpeg" alt="Capa playlist">
+          </div>
+        </div>
+        10.jpeg
+        11.jpeg
+        12.jpeg
+      </div>
+
+
+      <div class="browse-section">
+        <h2>Navegue por todas as seções</h2>
+        <!-- <div class="cards">
+          <!-- CARD 1 >
+          <div class="card-item">
+            <p>Boas festas</p>
+            <img src="./src/assets/playlist/1.jpeg" alt="">
+          </div>
+          <!-- CARD 2 >
+          <div class="card-item">
+            <p>Boas festas</p>
+            <img src="./src/assets/playlist/2.png" alt="">
+          </div>
+          <!-- CARD 3 >
+          <div class="card-item">
+            <p>Boas festas</p>
+            <img src="./src/assets/playlist/3.jpeg" alt="">
+          </div>
+          <!-- CARD 4 >
+          <div class="card-item">
+            <p>Boas festas</p>
+            <img src="./src/assets/playlist/3.jpeg" alt="">
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </main>
+
+  <!-- DESAFIO AULA 02: fazer o footer -->
+  <footer class="disclaimer-premium">
+    <div class="disclaimer-premium__text">
+      <p>Testar o Premium de graça</p>
+      <p>Inscreva-se para crutir música ilimitada e podcasts só com alguns anúncios. Não precisa de cartão de crédito</p>
+    </div>
+    <button class="disclaimer-premium__button">Inscreva-se grátis</button>
+  </footer>
+
   
-  -->
+  
 
 </body>
 </html>
