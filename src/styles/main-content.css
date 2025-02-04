@@ -85,7 +85,7 @@
 
 
 .greetings, .highlights, .browse-section {
-  padding: 16px 2px;
+  padding: 16px 0;
   margin: 10px;
 }
 .greetings h1 {
@@ -109,12 +109,15 @@
 .highlights .cards .card-item {
   background-color: var(--bg-card-item);
   width: 280px;
+  height: 240px;
   border-radius: 8px;
   display: flex;
   flex-flow: column nowrap;
+  justify-content: space-between;
   gap: 15px;
   padding: 16px;
   overflow: hidden;
+  position: relative;
 }
 
 .highlights .cards .card-item .card-item__artist h3 {
@@ -133,12 +136,25 @@
 }
 
 .highlights .cards .card-item img {
-  width: 220px;
+  width: 200px;
   transform: rotate(20deg);
   align-self: flex-end;
-  position: relative;
-  left: 60px;
-  top: 30px;
+  position: absolute;
+  right: -50px;
+  bottom: -25px;
+}
+.highlights .cards .card-item .listen-now {
+  display: flex;
+    justify-content: center;
+    width: 100px;
+    background-color: #fff;
+    color: #000;
+    border: 0;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 10px;
+    cursor: pointer;
 }
 
 .browse-section {
