@@ -84,17 +84,18 @@
   border-radius: 40px;
 }
 
-
-.greetings, .highlights, .browse-section {
+/* ✅ DESAFIO AULA 03 */
+/* .greetings, .highlights, .browse-section {
   padding: 16px 0;
   margin: 10px;
 }
 .greetings h1 {
   color: #fff;
   font-size: 2.2rem;
-}
+} */
 
-.highlights h2 {
+/* ✅ DESAFIO DA LURI */
+/* .highlights h2 {
   color: #fff;
   font-size: 1.8rem;
 }
@@ -157,9 +158,10 @@
     font-weight: 700;
     padding: 10px;
     cursor: pointer;
-}
+} */
 
-.browse-section {
+/* ✅ DESAFIO AULA 03 */
+/* .browse-section {
   padding: 16px 2px;
   margin: 10px 10px 60px;
   height: 800px;
@@ -168,7 +170,7 @@
   color: #fff;
   font-size: 1.6rem;
 }
-.browse-section .cards {
+.browse-section__cards {
   display: flex;
   flex-flow: row wrap;
   align-items: flex-start;
@@ -178,7 +180,7 @@
   padding: 16px 0;
   gap: 30px;
 }
-.browse-section .cards .card-item {
+.browse-section__cards .card-item {
   background-color: var(--bg-card-item);
   width: 240px;
   height: 240px;
@@ -190,18 +192,75 @@
   overflow: hidden;
   position: relative;
 }
-.browse-section .cards .card-item h3 {
+.browse-section__cards .card-item h3 {
   color: #fff;
   font-size: 1.8rem;
   font-weight: 700;
   margin: 0;
   padding: 0;
 }
-.browse-section .cards .card-item img {
+.browse-section__cards .card-item img {
   width: 200px;
   transform: rotate(20deg);
   align-self: flex-end;
   position: absolute;
   right: -50px;
   bottom: -25px;
+} */
+
+
+.playlist-container {
+  height: 68vh;
+  padding-top: 16px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: #121212;
 }
+
+.playlist {
+  margin: 24px;
+}
+
+.playlist #greeting {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 48px;
+}
+
+.playlist .session {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+}
+.offer__scroll-container {
+  max-height: 43vh;
+  margin: 24px;
+  overflow-y: auto;
+}
+
+.offer__scroll-container::-webkit-scrollbar {
+  width: 1px;
+}
+
+.offer__scroll-container::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.offer__list-item {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 16px;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.cards {
+  position: relative;
+  width: 220px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
